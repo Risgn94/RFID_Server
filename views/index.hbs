@@ -1,0 +1,77 @@
+<div id="exTab2" class="container">
+    <h1>Rigshospitalet RFID Tracking</h1>
+    <p>Welcome</p>
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a  href="#doctors" data-toggle="tab">Doctors</a>
+        </li>
+        <li>
+            <a href="#patients" data-toggle="tab">Patients</a>
+        </li>
+        <li>
+            <a href="#equipment" data-toggle="tab">Equipment</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="doctors">
+            <table id="doctor-table" class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Room</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each doctors}}
+                    <tr>
+                        <td>{{doctor.name}}</td>
+                        <td>{{doctor.type}}</td>
+                        <td>{{roomName}}</td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="patients">
+            <table id="patient-table" class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Disease</th>
+                    <th>Room</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each patients}}
+                    <tr>
+                        <td>{{patient.name}}</td>
+                        <td>{{patient.disease}}</td>
+                        <td>{{roomName}}</td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+        <div class="tab-pane" id="equipment">
+            <table id="equipment-table" class="table table-hover">
+                <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Room</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each equipment}}
+                    <tr>
+                        <td>{{equipment.name}}</td>
+                        <td>{{equipment.type}}</td>
+                        <td>{{roomName}}</td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
