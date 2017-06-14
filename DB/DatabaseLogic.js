@@ -22,6 +22,7 @@ DatabaseLogic.prototype.createConnection = function (cb) {
 DatabaseLogic.prototype.updateLocation = function (rfidId, roomId, cb) {
     this.createConnection(function (db) {
         db.collection('RFIDScanners').find({"roomId": parseInt(roomId)}).toArray(function(err, docs){
+            if(err) throw err;
             newRoom = docs[0].roomName;
             db.collection('RFIDTags');
             timestamp = new Date();
